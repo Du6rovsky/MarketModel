@@ -1,0 +1,57 @@
+import marketmodel.Market
+import org.codehaus.groovy.grails.plugins.metadata.GrailsPlugin
+import org.codehaus.groovy.grails.web.pages.GroovyPage
+import org.codehaus.groovy.grails.web.taglib.*
+import org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException
+import org.springframework.web.util.*
+import grails.util.GrailsUtil
+
+class gsp_marketModel_marketindex_gsp extends GroovyPage {
+public String getGroovyPageFileName() { "/WEB-INF/grails-app/views/market/index.gsp" }
+public Object run() {
+Writer out = getOut()
+Writer expressionOut = getExpressionOut()
+registerSitemeshPreprocessMode()
+printHtmlPart(0)
+printHtmlPart(1)
+printHtmlPart(2)
+createTagBody(1, {->
+printHtmlPart(3)
+createTagBody(2, {->
+createClosureForHtmlPart(4, 3)
+invokeTag('captureTitle','sitemesh',6,[:],3)
+})
+invokeTag('wrapTitleTag','sitemesh',6,[:],2)
+printHtmlPart(3)
+invokeTag('stylesheet','asset',7,['src':("application.css")],-1)
+printHtmlPart(3)
+invokeTag('javascript','asset',8,['src':("jquery.js")],-1)
+printHtmlPart(3)
+invokeTag('javascript','asset',9,['src':("percented.js")],-1)
+printHtmlPart(5)
+invokeTag('link','asset',10,['rel':("shortcut icon"),'href':("favicon.png"),'type':("image/x-icon")],-1)
+printHtmlPart(6)
+})
+invokeTag('captureHead','sitemesh',11,[:],1)
+printHtmlPart(6)
+createTagBody(1, {->
+printHtmlPart(7)
+invokeTag('message','g',13,['code':("label.header")],-1)
+printHtmlPart(8)
+invokeTag('render','g',14,['template':("/market/inform")],-1)
+printHtmlPart(9)
+})
+invokeTag('captureBody','sitemesh',16,[:],1)
+printHtmlPart(10)
+}
+public static final Map JSP_TAGS = new HashMap()
+protected void init() {
+	this.jspTags = JSP_TAGS
+}
+public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
+public static final long LAST_MODIFIED = 1416429657892L
+public static final String EXPRESSION_CODEC = 'html'
+public static final String STATIC_CODEC = 'none'
+public static final String OUT_CODEC = 'html'
+public static final String TAGLIB_CODEC = 'none'
+}

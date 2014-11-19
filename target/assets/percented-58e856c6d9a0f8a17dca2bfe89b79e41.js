@@ -1,0 +1,1 @@
+jQuery(function($){$(".m").keyup(function(){var v1=parseFloat($(this).val()),v2=parseFloat($(".k").val()),v3=100-(v1+v2);$(".w").val(v3)}),$(".w").keyup(function(){var v1=parseFloat($(this).val()),v2=parseFloat($(".m").val()),v3=100-(v1+v2);$(".k").val(v3)}),$(".k").keyup(function(){var v1=parseFloat($(this).val()),v2=parseFloat($(".w").val()),v3=100-(v1+v2);$(".m").val(v3)})});
