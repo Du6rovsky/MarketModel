@@ -1,7 +1,8 @@
 MarketModel
 ===========
 
-Market Model Web App (powered by Grails)
+Market Model Web App (Java, Groovy/Grails, GSP, AJAX, Javascript(Jquery), HTML/CSS)
+Веб-приложение модели магазина.
 
 Алгоритм
 
